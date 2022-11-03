@@ -5,16 +5,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Acme", sans-serif;
 }
 
 .container {
-  background-image: url("https://images.unsplash.com/photo-1518796745738-41048802f99a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
-  background-position: center;
+  background-image: url("img/16.jpeg");
+  background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  width: 100%;
   display: grid;
   grid-template-rows: 8rem auto;
   grid-template-areas:
@@ -30,69 +30,69 @@ body {
 }
 
 .box {
-  /* makes the box wide */
-  width: 29rem;
-  height: 29rem;
-  background-color: rgba(95, 161, 242, 0.6);
-  border-radius: 1.5rem;
+  aspect-ratio: 5/7;
+  width: 30rem;
+  background-color: rgba(95, 161, 242, 0.8);
+  border-radius: 0.8rem;
   color: aliceblue;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 2fr 1fr 3fr 1fr 1fr 1fr;
   justify-content: center;
   align-content: center;
-  grid-template-rows: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
 }
 
 h1,
 h2,
 p {
+  color: white;
   text-align: center;
   margin: 0;
 }
 
 h1 {
-  margin-top: .9rem;
+  margin-top: 0.9rem;
+}
+
+h2 {
+  text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
+    1px 1px 0 #000;
+  margin-top: 1rem;
+  font-size: 3.5rem;
 }
 
 p {
   padding: 0 2rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #fff;
-  margin: .5em 2em;
+  background-color: white;
+  justify-content: center;
+  margin: 1rem 2rem;
+  padding: 0;
 }
 
 .social {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1rem 1rem;
   justify-items: center;
-  align-items: center;
-}
-
-.Nv {
-  grid-area: Nv;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  background-color: rgba(119, 90, 114, 0.83);
-}
-
-.img {
-  position: relative;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2rem;
-  top: -3rem;
-}
-
-.ProfilePic {
-  width: 14rem;
-  border-radius: 50%;
+  align-items: stretch;
 }
 
 .social-icon {
@@ -105,11 +105,40 @@ hr {
   color: rgb(116, 116, 116);
 }
 
+.Nv {
+  grid-area: Nv;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(119, 90, 114, 0.83);
+}
+
+.img {
+  margin-top: 1rem;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProfilePic {
+  background: url("img/MalinPP.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  box-shadow: 0px 5px 20px black;
+}
+
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 
 .nav-item {
@@ -125,7 +154,6 @@ nav {
   height: 40px;
   padding: 10px 25px;
   border: 2px solid rgba(95, 161, 242, 0.6);
-  font-family: 'Lato', sans-serif;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -184,4 +212,16 @@ nav {
   border-color: rgba(95, 161, 242, 0.6);
   height: 100%;
   width: 100%;
+}
+
+.photo-text {
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: bold;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.75rem;
+  position: absolute;
+  /* top: 96vh; */
+  bottom: 0.3rem;
+  right: 0.3rem;
 }
