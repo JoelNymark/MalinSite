@@ -6,17 +6,16 @@ body {
   margin: 0;
   padding: 0;
   /* font-family: "Raleway", sans-serif; */
-  font-family: "Acme", sans-serif;
+  /* font-family: "Acme", sans-serif; */
 }
 
 .container {
   background-image: url("img/16.jpeg");
-  background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   display: grid;
-  grid-template-rows: 8rem auto;
+  grid-template-rows: 9rem auto;
   grid-template-areas:
     "Nv"
     "CenterBox";
@@ -29,12 +28,112 @@ body {
   justify-items: center;
 }
 
+.Nav {
+  grid-area: Nv;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(95, 161, 242, 0.85);
+}
+
+.Title {
+  color: white;
+  margin: 0.4rem 0rem;
+}
+
+a.Title-Text {
+  /* Need a font */
+  /* font-family: "Akaya Telivigala", cursive; */
+  /* font-family: "Bubblegum Sans", cursive; */
+  /* font-family: "Chewy", cursive; */
+  /* font-family: "Cookie", cursive; */
+  font-family: "Dancing Script", cursive;
+  /* font-family: "Pacifico", cursive; */
+  text-decoration: none;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000;
+}
+
+a.Title-Text > img {
+  position: absolute;
+  z-index: 100;
+  right: 28.9vw;
+  width: 6rem;
+  height: 6rem;
+}
+
+/* nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+} */
+
+.btn-12 {
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0rem 0.6rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-12:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  background: white;
+  left: 45%;
+  height: 2px;
+  bottom: 0;
+  transition: all 0.3s;
+}
+
+.btn-12:hover:before {
+  width: 100%;
+  left: 0;
+}
+
+/* .btn-nav {
+  font-family: 'Oswald', sans-serif;
+  margin: 0 .8rem;
+  padding: 0.1rem 0.6rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-nav:hover {
+  border-bottom: 2px solid white;
+} */
+
 .box {
   aspect-ratio: 5/7;
   width: 30rem;
-  background-color: rgba(95, 161, 242, 0.8);
+  background-color: rgba(61, 69, 80, 0.918);
   border-radius: 0.8rem;
-  color: aliceblue;
+  color: white;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4fr 2fr 1fr 3fr 1fr 1fr 1fr;
@@ -45,7 +144,7 @@ body {
   border-color: black;
 }
 
-h1,
+/* h1,
 h2,
 p {
   color: white;
@@ -54,10 +153,14 @@ p {
 }
 
 h1 {
+  font-size: 4rem;
   margin-top: 0.9rem;
-}
+} */
 
 h2 {
+  font-family: "Acme", sans-serif;
+  margin: 0;
+  text-align: center;
   text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
     1px 1px 0 #000;
   margin-top: 1rem;
@@ -65,6 +168,8 @@ h2 {
 }
 
 p {
+  margin: 0;
+  text-align: center;
   padding: 0 2rem;
   font-size: 2rem;
   line-height: 2.2rem;
@@ -102,15 +207,7 @@ hr {
 }
 
 .social-icon:hover {
-  color: rgb(116, 116, 116);
-}
-
-.Nv {
-  grid-area: Nv;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  background-color: rgba(119, 90, 114, 0.83);
+  color: rgba(95, 161, 242, 1);
 }
 
 .img {
@@ -132,86 +229,6 @@ hr {
   border-width: 2px;
   border-color: black;
   box-shadow: 0px 5px 20px black;
-}
-
-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 0.3rem;
-}
-
-.nav-item {
-  color: rgba(95, 161, 242, 0.6);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.3rem;
-}
-
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  padding: 10px 25px;
-  border: 2px solid rgba(95, 161, 242, 0.6);
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  margin: 20px;
-  outline: none;
-  text-align: center;
-  text-decoration: none;
-}
-
-.btn-nav {
-  position: relative;
-  color: rgba(95, 161, 242, 0.6);
-  z-index: 2;
-  line-height: 40px;
-  padding: 0;
-}
-
-.btn-nav:hover {
-  border: none;
-}
-
-.btn-nav:before,
-.btn-nav:after {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 0%;
-  border: 2px solid;
-  z-index: -1;
-  transition: all 0.3s ease;
-}
-
-.btn-nav:before {
-  top: 0;
-  left: 0;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  border-top-color: rgba(95, 161, 242, 0.6);
-  border-left-color: rgba(95, 161, 242, 0.6);
-}
-
-.btn-nav:after {
-  bottom: 0;
-  right: 0;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-bottom-color: rgba(95, 161, 242, 0.6);
-  border-right-color: rgba(95, 161, 242, 0.6);
-}
-
-.btn-nav:hover:before,
-.btn-nav:hover:after {
-  border-color: rgba(95, 161, 242, 0.6);
-  height: 100%;
-  width: 100%;
 }
 
 .photo-text {

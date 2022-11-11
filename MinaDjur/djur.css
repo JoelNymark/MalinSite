@@ -1,0 +1,214 @@
+::root {
+  --main-bg-blue: 95, 161, 242;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: white;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 9rem auto;
+  grid-template-areas:
+    "Nv"
+    "CenterBox";
+}
+
+.Nav {
+  grid-area: Nv;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(95, 161, 242, 0.85);
+}
+
+.Title {
+  color: white;
+  margin: 0.4rem 0rem;
+}
+
+a.Title-Text {
+  font-family: "Dancing Script", cursive;
+  text-decoration: none;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000;
+}
+
+a.Title-Text > img {
+  position: absolute;
+  z-index: 100;
+  right: 28.9vw;
+  width: 6rem;
+  height: 6rem;
+}
+
+.btn-12 {
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0rem 0.6rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-12:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  background: white;
+  left: 45%;
+  height: 2px;
+  bottom: 0;
+  transition: all 0.3s;
+}
+
+.btn-12:hover:before {
+  width: 100%;
+  left: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  background-color: white;
+  justify-content: center;
+  margin: 1rem 2rem;
+  padding: 0;
+}
+
+.CenterBox {
+  grid-area: CenterBox;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.title-text {
+  justify-self: center;
+  width: 50vw;
+  background-color: darkred;
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.animal-title {
+  font-family: "acme", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.animal-name {
+  font-family: "oswald", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.info {
+  font-family: "telex", sans-serif;
+  justify-self: center;
+  /* align-self: center; */
+  width: 50vw;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.info-text-general {
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: bisque;
+}
+
+.general-facts,
+.general-ranking,
+.general-avkommor {
+  margin: 0 1rem 0 1rem;
+}
+
+.info-slider {
+  grid-area: 1 / 2 / 2 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.slider-text {
+  font-size: 1rem;
+  line-height: 3px;
+}
+
+.info-text-heavy {
+  background-color: chartreuse;
+  grid-area: 2 / 1 / 3 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto) 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.info-about {
+  margin: 0 1rem;
+}
+
+.info-hoppning {
+  margin: 0 1rem;
+}
+
+.info-images-video {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.splide__slide {
+  opacity: 0.6;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
